@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Schema;
 
+//Anonymous Methods
+delegate double GetSum(double num1, double num2);
+
 namespace CsharpExercises
 {
     class Animal
@@ -63,6 +66,7 @@ namespace CsharpExercises
         {
             return num1 + num2;
         }
+
     }
 
 
