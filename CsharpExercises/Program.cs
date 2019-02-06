@@ -215,6 +215,73 @@ namespace CsharpExercises
             Console.WriteLine("Number of animals: " + Animal.getNumOfAnimals());
             Console.WriteLine(spot.toString());
 
+            Animal Burczek = new Animal()
+            {
+                name = "Burczek",
+                height = 12,
+                weight = 6,
+                sound = "Grrrr"
+            };
+
+            Dog burek = new Dog();
+            Console.WriteLine(burek.toString());
+            burek = new Dog(20,15,"Burek", "Woof", "Chicken");
+            Console.WriteLine(burek.toString());
+
+            Console.WriteLine(spot.getSum(num1: 1.4, num2: 2.7));
+            Console.WriteLine("Number of animals: " + Animal.getNumOfAnimals());
+
+          //Shapes////////////////
+
+            Shape rect = new Rectangle(5,5);
+            Shape tri = new Triangle(5,5);
+
+            Console.WriteLine("Rectangle area: "+rect.area());
+            Console.WriteLine("Triangle area: "+tri.area());
+
+            Rectangle combRect = new Rectangle(5,5)+new Rectangle(5,5);
+            Console.WriteLine("combRect area: "+combRect.area());
+
+          //Generics
+
+            KeyValue<string, string> superman = new KeyValue<string, string>("","");
+            superman.key = "Superman";
+            superman.value = "Clark Kent";
+
+            KeyValue<int, string> samsungTV = new KeyValue<int, string>(0,"");
+            samsungTV.key = 1234;
+            samsungTV.value = "A 50\" Samsung TV";
+
+            superman.showData();
+            samsungTV.showData();
+
+          //Enums
+
+            Temperature microwaveTemp = Temperature.Low;
+
+            switch(microwaveTemp)
+            {
+                case Temperature.Freeze:
+                    Console.WriteLine("Temp on Freezing");
+                    break;
+                case Temperature.Low:
+                    Console.WriteLine("Temp on Low");
+                    break;
+                case Temperature.Warm:
+                    Console.WriteLine("Temp on Warm");
+                    break;
+                case Temperature.Boil:
+                    Console.WriteLine("Temp on Boil");
+                    break;
+            }
+
+          //Structs
+            
+            Customers bob = new Customers();
+
+            bob.createCust("BoB", 15.60, 12345);
+            bob.showCust();
+
             Console.ReadLine();
         }
     }
